@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="150dp"
+    >
+<android.support.v7.widget.CardView
+    android:id="@+id/card_view"
+    android:layout_gravity="center"
+    xmlns:app="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    card_view:cardCornerRadius="10dp"
+    android:backgroundTint="@color/white"
+    app:cardUseCompatPadding="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:clickable="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/register_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="EAX"
+                android:fontFamily="@font/dos_font"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                android:textSize="30sp"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:id="@+id/register_value_text_bin"
+                android:layout_width="wrap_content"
+                android:layout_below="@id/register_name"
+                android:layout_height="wrap_content"
+                android:text="BIN:"
+                android:layout_alignParentLeft="true"
+                android:fontFamily="@font/dos_font"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:layout_marginLeft="5dp"
+                android:layout_alignBaseline="@id/register_value_bin"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:id="@+id/register_value_bin"
+                android:layout_width="wrap_content"
+                android:layout_below="@id/register_name"
+                android:layout_toRightOf="@id/register_value_text_hex"
+                android:layout_marginLeft="5dp"
+                android:layout_height="wrap_content"
+                android:text="00000000000000000000000000000000"
+                android:fontFamily="@font/dos_font"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:id="@+id/register_value_text_hex"
+                android:layout_width="wrap_content"
+                android:layout_below="@id/register_value_text_bin"
+                android:layout_height="wrap_content"
+                android:text="HEX:"
+                android:layout_alignParentLeft="true"
+                android:fontFamily="@font/dos_font"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:layout_marginLeft="5dp"
+                android:layout_alignBaseline="@id/register_value_hex"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:id="@+id/register_value_hex"
+                android:layout_width="wrap_content"
+                android:layout_below="@id/register_value_bin"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/register_value_text_hex"
+                android:layout_marginLeft="10dp"
+                android:layout_height="wrap_content"
+                android:text="0x00000000"
+                android:fontFamily="@font/dos_font"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:id="@+id/register_value_text_dec"
+                android:layout_width="wrap_content"
+                android:layout_below="@id/register_value_text_hex"
+                android:layout_height="wrap_content"
+                android:text="DEC:"
+                android:layout_alignParentLeft="true"
+                android:fontFamily="@font/dos_font"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:layout_marginLeft="5dp"
+                android:layout_alignBaseline="@id/register_value_dec"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:id="@+id/register_value_dec"
+                android:layout_width="wrap_content"
+                android:layout_below="@id/register_value_hex"
+                android:layout_toRightOf="@id/register_value_text_dec"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:fontFamily="@font/dos_font"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:layout_centerHorizontal="true"/>
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+    <item
+        android:id="@+id/action_step_over"
+        android:orderInCategory="200"
+        android:title="Step over"
+        android:icon="@drawable/ic_arrow_downward_black_24dp"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/action_step"
+        android:orderInCategory="200"
+        android:title="Run"
+        android:icon="@drawable/ic_arrow_forward_black_24dp"
+        app:showAsAction="always"/>
+</menu>

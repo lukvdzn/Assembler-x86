@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Assembly</string>
+    <string name="hint_edit_text">Type</string>
+</resources>

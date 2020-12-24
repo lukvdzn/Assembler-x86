@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#69F0AE</color>
+    <color name="colorPrimaryDark">#00E676</color>
+    <color name="colorAccent">#00E5FF</color>
+
+    <color name="asmBackground">#010080</color>
+    <color name="registerPopUpBackground">#4962ef</color>
+    <color name="asmModifiedRegister">#F3F56E</color>
+    <color name="labelColor">#A726D9</color>
+    <color name="sectionColor">#25DF60</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <color name="colorBackground">#424242</color>
+    <color name="colorBackgroundCard">#757575</color>
+    <color name="colorFlagsBackground">#01579B</color>
+    <color name="colorSelectedInstruction">#FFEE58</color>
+    <color name="colorUnselectedInstruction">#000000</color>
+    <color name="redModifiedStateRegister">#C62828</color>
+</resources>

@@ -1,0 +1,642 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/asmBackground"
+    tools:context=".DebugActivity">
+
+    <!--Toolbar-->
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+    <!--REGISTERS-->
+    <TableLayout
+        android:id="@+id/register_layout"
+        android:layout_below="@id/my_toolbar"
+        android:layout_margin="5dp"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content">
+
+
+        <!--REGISTER EAX-->
+        <TableRow>
+            <!-- A CardView that contains a TextView -->
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_view_eax"
+                android:layout_width="180dp"
+                android:layout_height="50dp"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardBackgroundColor="@android:color/transparent"
+                card_view:cardElevation="0dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/eax_text"
+                    android:layout_centerVertical="true"
+                    android:gravity="left"
+                    android:layout_marginLeft="3dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/dos_font"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:text="EAX:" />
+
+                    <TextView
+                        android:paddingTop="3dp"
+                        android:id="@+id/eax_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@id/eax_text"
+                        android:textColor="@color/white"
+                        android:layout_toRightOf="@id/eax_text"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                        android:fontFamily="@font/dos_font"
+                        android:textSize="18sp"
+                        android:text="0x00000000"/>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+        </TableRow>
+
+        <!--REGISTER EBX-->
+        <TableRow
+            android:layout_marginTop="5dp">
+            <!-- A CardView that contains a TextView -->
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_view_ebx"
+                android:layout_width="180dp"
+                android:layout_height="50dp"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardBackgroundColor="@android:color/transparent"
+                card_view:cardElevation="0dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/ebx_text"
+                        android:layout_centerVertical="true"
+                        android:gravity="left"
+                        android:layout_marginLeft="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/dos_font"
+                        android:textSize="20sp"
+                        android:text="EBX:" />
+
+                    <TextView
+                        android:paddingTop="3dp"
+                        android:id="@+id/ebx_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@id/ebx_text"
+                        android:layout_toRightOf="@id/ebx_text"
+                        android:textColor="@color/white"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                        android:fontFamily="@font/dos_font"
+                        android:textSize="18sp"
+                        android:text="0x00000000"/>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+        </TableRow>
+
+        <!--REGISTER ECX-->
+        <TableRow
+            android:layout_marginTop="5dp">
+            <!-- A CardView that contains a TextView -->
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_view_ecx"
+                android:layout_width="180dp"
+                android:layout_height="50dp"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardBackgroundColor="@android:color/transparent"
+                card_view:cardElevation="0dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/ecx_text"
+                        android:layout_centerVertical="true"
+                        android:gravity="left"
+                        android:layout_marginLeft="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/dos_font"
+                        android:textSize="20sp"
+                        android:text="ECX:" />
+
+                    <TextView
+                        android:paddingTop="3dp"
+                        android:id="@+id/ecx_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@id/ecx_text"
+                        android:layout_toRightOf="@id/ecx_text"
+                        android:textColor="@color/white"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                        android:fontFamily="@font/dos_font"
+                        android:textSize="18sp"
+                        android:text="0x00000000"/>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+        </TableRow>
+
+
+        <!--REGISTER EDX-->
+        <TableRow
+            android:layout_marginTop="5dp">
+            <!-- A CardView that contains a TextView -->
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_view_edx"
+                android:layout_width="180dp"
+                android:layout_height="50dp"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardBackgroundColor="@android:color/transparent"
+                card_view:cardElevation="0dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/edx_text"
+                        android:layout_centerVertical="true"
+                        android:gravity="left"
+                        android:layout_marginLeft="3dp"
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/white"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/dos_font"
+                        android:textSize="20sp"
+                        android:text="EDX:" />
+
+                    <TextView
+                        android:paddingTop="3dp"
+                        android:id="@+id/edx_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@id/edx_text"
+                        android:textColor="@color/white"
+                        android:layout_toRightOf="@id/edx_text"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                        android:fontFamily="@font/dos_font"
+                        android:textSize="18sp"
+                        android:text="0x00000000"/>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+        </TableRow>
+
+        <!--REGISTER ESI-->
+        <TableRow
+            android:layout_marginTop="5dp">
+            <!-- A CardView that contains a TextView -->
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_view_esi"
+                android:layout_width="180dp"
+                android:layout_height="50dp"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardBackgroundColor="@android:color/transparent"
+                card_view:cardElevation="0dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/esi_text"
+                        android:layout_centerVertical="true"
+                        android:gravity="left"
+                        android:layout_marginLeft="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/dos_font"
+                        android:textSize="20sp"
+                        android:text="ESI:" />
+
+                    <TextView
+                        android:paddingTop="3dp"
+                        android:id="@+id/esi_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@id/esi_text"
+                        android:layout_toRightOf="@id/esi_text"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/white"
+                        android:layout_marginLeft="3dp"
+                        android:fontFamily="@font/dos_font"
+                        android:textSize="18sp"
+                        android:text="0x00000000"/>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+        </TableRow>
+
+
+        <!--REGISTER EDI-->
+        <TableRow
+            android:layout_marginTop="5dp">
+            <!-- A CardView that contains a TextView -->
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_view_edi"
+                android:layout_width="180dp"
+                android:layout_height="50dp"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardBackgroundColor="@android:color/transparent"
+                card_view:cardElevation="0dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/edi_text"
+                        android:layout_centerVertical="true"
+                        android:gravity="left"
+                        android:layout_marginLeft="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/dos_font"
+                        android:textSize="20sp"
+                        android:text="EDI:" />
+
+                    <TextView
+                        android:paddingTop="3dp"
+                        android:id="@+id/edi_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@id/edi_text"
+                        android:layout_toRightOf="@id/edi_text"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/dos_font"
+                        android:textSize="18sp"
+                        android:text="0x00000000"/>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+        </TableRow>
+
+
+        <!--REGISTER EBP-->
+        <TableRow
+            android:layout_marginTop="5dp">
+            <!-- A CardView that contains a TextView -->
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_view_ebp"
+                android:layout_width="180dp"
+                android:layout_height="50dp"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardBackgroundColor="@android:color/transparent"
+                card_view:cardElevation="0dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/ebp_text"
+                        android:layout_centerVertical="true"
+                        android:gravity="left"
+                        android:textColor="@color/white"
+                        android:layout_marginLeft="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/dos_font"
+                        android:textSize="20sp"
+                        android:text="EBP:" />
+
+                    <TextView
+                        android:paddingTop="3dp"
+                        android:id="@+id/ebp_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@id/ebp_text"
+                        android:layout_toRightOf="@id/ebp_text"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/dos_font"
+                        android:textSize="18sp"
+                        android:text="0x00000000"/>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+        </TableRow>
+
+
+        <!--REGISTER ESP-->
+        <TableRow
+            android:layout_marginTop="5dp">
+            <!-- A CardView that contains a TextView -->
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_view_esp"
+                android:layout_width="180dp"
+                android:layout_height="50dp"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardBackgroundColor="@android:color/transparent"
+                card_view:cardElevation="0dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/esp_text"
+                        android:layout_centerVertical="true"
+                        android:gravity="left"
+                        android:layout_marginLeft="3dp"
+                        android:textColor="@color/white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/dos_font"
+                        android:textSize="20sp"
+                        android:text="ESP:" />
+
+                    <TextView
+                        android:paddingTop="3dp"
+                        android:id="@+id/esp_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@id/esp_text"
+                        android:layout_toRightOf="@id/esp_text"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                        android:fontFamily="@font/dos_font"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:text="0x404"/>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+        </TableRow>
+
+    </TableLayout>
+
+    <!--FLAGS-->
+    <TableLayout
+        android:layout_below="@id/register_layout"
+        android:layout_margin="5dp"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content">
+
+        <!--CARRY FLAG-->
+        <TableRow>
+            <!-- A CardView that contains a TextView -->
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_view_carry"
+                android:layout_width="180dp"
+                android:layout_height="30dp"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardBackgroundColor="@android:color/transparent"
+                card_view:cardElevation="0dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/carry_text"
+                        android:layout_centerVertical="true"
+                        android:gravity="left"
+                        android:layout_marginLeft="3dp"
+                        android:textColor="@color/white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/dos_font"
+                        android:textSize="20sp"
+                        android:text="CARRY:" />
+
+                    <TextView
+                        android:paddingTop="3dp"
+                        android:id="@+id/carry_bit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:layout_alignBaseline="@id/carry_text"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/dos_font"
+                        android:textSize="20sp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="28dp"
+                        android:text="0"/>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+        </TableRow>
+
+        <!--OVERFLOW FLAG-->
+        <TableRow
+            android:layout_marginTop="5dp">
+            <!-- A CardView that contains a TextView -->
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_view_overflow"
+                android:layout_width="180dp"
+                android:layout_height="30dp"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardBackgroundColor="@android:color/transparent"
+                card_view:cardElevation="0dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/overflow_text"
+                        android:layout_centerVertical="true"
+                        android:gravity="left"
+                        android:layout_marginLeft="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/dos_font"
+                        android:textSize="20sp"
+                        android:text="OVERFLOW:" />
+
+                    <TextView
+                        android:paddingTop="3dp"
+                        android:id="@+id/overflow_bit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@id/overflow_text"
+                        android:textColor="@color/white"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/dos_font"
+                        android:textSize="20sp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="28dp"
+                        android:text="0"/>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+        </TableRow>
+
+        <!--SIGN FLAG-->
+        <TableRow
+            android:layout_marginTop="5dp">
+            <!-- A CardView that contains a TextView -->
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_view_sign"
+                android:layout_width="180dp"
+                android:layout_height="30dp"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardBackgroundColor="@android:color/transparent"
+                card_view:cardElevation="0dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/sign_text"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/white"
+                        android:gravity="left"
+                        android:layout_marginLeft="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/dos_font"
+                        android:textSize="20sp"
+                        android:text="SIGN:" />
+
+                    <TextView
+                        android:paddingTop="3dp"
+                        android:id="@+id/sign_bit"
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/white"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@id/sign_text"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/dos_font"
+                        android:textSize="20sp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="28dp"
+                        android:text="0"/>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+        </TableRow>
+
+        <!--ZERO FLAG-->
+        <TableRow
+            android:layout_marginTop="5dp">
+            <!-- A CardView that contains a TextView -->
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_view_zero"
+                android:layout_width="180dp"
+                android:layout_height="30dp"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardBackgroundColor="@android:color/transparent"
+                card_view:cardElevation="0dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/zero_text"
+                        android:layout_centerVertical="true"
+                        android:gravity="left"
+                        android:layout_marginLeft="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/dos_font"
+                        android:textSize="20sp"
+                        android:text="ZERO:" />
+
+                    <TextView
+                        android:paddingTop="3dp"
+                        android:id="@+id/zero_bit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@id/zero_text"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/dos_font"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="28dp"
+                        android:text="0"/>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+        </TableRow>
+
+
+    </TableLayout>
+
+    <!--INSTRUCTIONS-->
+
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/my_toolbar"
+        android:layout_weight="1">
+
+    <TableLayout
+        android:id="@+id/instruction_table"
+       android:layout_margin="5dp"
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    </TableLayout>
+    </ScrollView>
+
+
+</RelativeLayout>
